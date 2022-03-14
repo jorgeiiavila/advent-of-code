@@ -1,0 +1,13 @@
+{
+  "name": "advent-of-code",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "author": "jorgeiiavila",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^17.0.21"
+  },
+  "scripts": {
+    "start": "ts-node src/index.ts"
+  }
+}
