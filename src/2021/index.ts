@@ -1,17 +1,12 @@
-import {
-  calculateLifeSupportRating,
-  calculatePowerConsumption,
-} from "./puzzles/day-three";
-import { Bit } from "./types";
-import { readDayThreeInput } from "./utils";
+import { getBingoWinnerBoardScore } from "./puzzles/day-four";
+import { readInput } from "./utils/read-day-four-input";
 
 async function start() {
   try {
-    const bitsList = await readDayThreeInput(
-      `${__dirname}/input/day-three.txt`
+    const { matrixes, nums } = await readInput(
+      `${__dirname}/input/day-four.txt`
     );
-    const lifeSupportRating = calculateLifeSupportRating(bitsList);
-    console.log(lifeSupportRating);
+    console.log(getBingoWinnerBoardScore(matrixes, nums, (a, b) => a > b));
   } catch (err) {
     console.error(err);
   }
